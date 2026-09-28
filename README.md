@@ -1,28 +1,54 @@
-# online_fraud
-The advent of online payment systems has greatly simplified the payment process, making transactions more convenient and accessible. However, this ease of use has also led to a rise in payment fraud, particularly when it comes to credit card transactions. Online payment fraud can affect anyone using these systems, and the risk is heightened when credit cards are involved. This makes it crucial for credit card companies to implement robust fraud detection systems. By doing so, they can protect their customers from being charged for goods and services they never purchased, ensuring a secure and trustworthy payment environment.
-### online payment fraud using machine learning-
-To identify online payment fraud using machine learning, the first step is to train a model capable of classifying transactions as either fraudulent or non-fraudulent. To achieve this, we require a dataset that provides insights into online payment fraud. Such a dataset enables us to analyze transaction patterns and understand which characteristics are associated with fraudulent activity.
+# 💳 Online Payment Fraud Detection Using Machine Learning
 
-For this task, I’ve gathered a dataset from Kaggle that contains historical data on fraudulent transactions. This dataset is specifically designed to help detect fraud in online payments. Here are the columns included in the dataset:
+## 📌 Overview
 
-step: Represents a time unit, where each step corresponds to one hour.
+This project focuses on identifying **fraudulent online payment transactions using Machine Learning**.
 
-type: Indicates the type of online transaction.
+The objective is to build a classification model that can distinguish between **fraudulent transactions (1)** and **legitimate transactions (0)** by analyzing transaction patterns and customer account information.
 
-amount: Specifies the amount involved in the transaction.
+## 📂 Dataset
 
-nameOrig: Identifies the customer initiating the transaction.
+The dataset contains historical online payment transactions and is sourced from Kaggle.
 
-oldbalanceOrg: The balance of the originating customer before the transaction.
+### 🔗 Kaggle Dataset
 
-newbalanceOrig: The balance of the originating customer after the transaction.
+**[Online Payment Fraud Detection Dataset – Kaggle](https://www.kaggle.com/datasets/ealaxi/paysim1)**
 
-nameDest: Identifies the recipient of the transaction.
+## 📊 Dataset Features
 
-oldbalanceDest: The recipient's balance before the transaction.
+| Feature          | Description                                                             |
+| ---------------- | ----------------------------------------------------------------------- |
+| `step`           | Represents a time unit, where each step corresponds to one hour         |
+| `type`           | Type of online transaction                                              |
+| `amount`         | Amount involved in the transaction                                      |
+| `nameOrig`       | Customer initiating the transaction                                     |
+| `oldbalanceOrg`  | Originating customer's balance before the transaction                   |
+| `newbalanceOrig` | Originating customer's balance after the transaction                    |
+| `nameDest`       | Recipient of the transaction                                            |
+| `oldbalanceDest` | Recipient's balance before the transaction                              |
+| `newbalanceDest` | Recipient's balance after the transaction                               |
+| `isFraud`        | Target variable: `1` for fraudulent and `0` for legitimate transactions |
 
-newbalanceDest: The recipient's balance after the transaction.
+## 🔍 Project Workflow
 
-isFraud: A label indicating whether the transaction is fraudulent (1) or not (0).
+* Data loading and exploration
+* Data cleaning and preprocessing
+* Exploratory Data Analysis
+* Feature selection and encoding
+* Handling the highly imbalanced fraud data
+* Training Machine Learning classification models
+* Evaluating model performance using **Precision, Recall and F1-Score**
 
-By analyzing these features, we can develop a model to distinguish between legitimate and fraudulent transactions in online payment systems.
+## 🛠️ Tools & Libraries
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Jupyter Notebook
+
+## 🎯 Objective
+
+The main goal is to develop a machine learning model capable of identifying potentially fraudulent online payment transactions and understanding the transaction characteristics associated with fraud.
